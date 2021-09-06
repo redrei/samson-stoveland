@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .App-logo {
@@ -35,4 +37,26 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.OverHeader{
+  background-color: #353535;
+  height: 7vh;
+  width: 100vw;
+  text-align: center;
+  color: goldenrod;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.Home{
+  margin-top: 0vh;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+
+  display: flex;
 }
