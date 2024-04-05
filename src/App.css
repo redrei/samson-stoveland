@@ -49,7 +49,8 @@
   padding: 0;
   display: flex;
   align-content: center;
-  justify-content: center;
+  justify-content: space-between; /* Spaces out the child elements */
+  align-items: center; /* Centers items vertically */
 }
 
 .Home{
@@ -59,4 +60,179 @@
   justify-content: center;
 
   display: flex;
+}
+
+/* Overall background and text colors */
+body {
+  background-color: #f5f5f5; /* Light gray background */
+  color: #333; /* Dark gray text for readability */
+  font-family: 'Arial', sans-serif; /* Modern, readable font */
+}
+
+/* Styling for the navigation (Table of Contents) */
+nav {
+  background-color: #444; /* Darker gray for contrast */
+  color: #fff; /* White text */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+nav h3 {
+  margin-top: 0;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff; /* White links */
+  transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+  color: #bbb; /* Lighter gray on hover for a subtle effect */
+}
+
+/* Styling for each content section */
+section {
+  background-color: #eee; /* Very light gray background for sections */
+  color: #222; /* Slightly darker text color for contrast */
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 5px;
+}
+
+h1, h2 {
+  color: #111; /* Almost black for titles */
+}
+
+/* Enhance the separation and readability of sections */
+section + section {
+  border-top: 2px solid #ddd;
+}
+
+.OverHeader button {
+  background-color: #555;
+  color: goldenrod;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.OverHeader button:hover {
+  background-color: #777;
+}
+
+.OverHeader div {
+  padding: 0.5rem;
+}
+
+.header-navigation {
+  display: flex; /* Enables Flexbox for navigation items */
+}
+
+@media (max-width: 600px) {
+  .OverHeader {
+    padding: 5px 10px;
+  }
+
+  .header-navigation button {
+    padding: 3px 6px;
+    font-size: 0.8rem;
+  }
+}
+
+.toc-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.toc {
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+  width: auto; /* Adjust width as needed */
+  max-width: 90%; /* Ensures the box doesn't get too wide on larger screens */
+  color: goldenrod;
+  background-color: #353535;
+  padding: 20px; /* Spacing inside the box */
+  border-radius: 8px; /* Rounded corners for a modern look */
+}
+
+.toc h3 {
+  margin-top: 0;
+  color: goldenrod;
+  text-align: center; /* Center-aligns the title */
+}
+
+.toc ul {
+  list-style: none; /* Removes default list styling */
+  padding: 0;
+  margin: 10px 0 0; /* Adjusts spacing */
+}
+
+.toc ul li {
+  margin: 10px 0; /* Space out list items */
+}
+
+.toc ul li a {
+  text-decoration: none; /* Removes underline from links */
+  color: whitesmoke; /* Example link color - adjust as needed */
+  transition: color 0.2s; /* Smooth color transition on hover */
+}
+
+.toc ul li a:hover {
+  color: darkgrey; /* Darker shade on hover */
+}
+
+@media (max-width: 768px) {
+  .toc {
+    max-width: 100%; /* Allows the TOC to fill the container on smaller screens */
+    padding: 15px; /* Adjusts padding for smaller screens */
+  }
+
+  .toc h3 {
+    font-size: 1rem; /* Adjusts title font size on smaller screens */
+  }
+}
+
+.page-content {
+  padding: 20px; /* Adjust the padding as needed */
+  margin: 0 auto; /* Centers the content if there's a max-width */
+  max-width: 95vw; /* Maximum width of the content area; adjust as needed */
+  box-sizing: border-box; /* Ensures padding doesn't increase the actual width */
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: 15px; /* Slightly reduce padding for smaller screens */
+  }
+}
+
+.sections-container {
+  display: flex;
+  justify-content: space-between; /* Distributes space evenly between the sections */
+  margin: 20px 0; /* Adds some margin above and below the container */
+}
+
+.section {
+  flex: 1; /* Each section will take up equal width */
+  padding: 20px; /* Adds padding inside each section for spacing */
+  box-sizing: border-box; /* Ensures padding doesn't add to the total width */
+  /* Optional: Add border, background, or other styling as needed */
+  margin: 0 10px; /* Adds margin between sections */
+}
+
+/* Adjust the flex-direction on smaller screens to stack the sections */
+@media (max-width: 768px) {
+  .sections-container {
+    flex-direction: column;
+  }
+  .section {
+    margin: 10px 0; /* Adjust margin for stacked layout */
+  }
 }
